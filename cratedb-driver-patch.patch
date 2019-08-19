@@ -1,0 +1,10 @@
+--- node_modules/@cubejs-backend/postgres-driver/driver/PostgresDriver-origin.js	2019-08-19 13:03:59.000000000 +0800
++++ node_modules/@cubejs-backend/postgres-driver/driver/PostgresDriver.js	2019-08-19 13:04:05.000000000 +0800
+@@ -39,7 +39,6 @@
+   async query(query, values) {
+     const client = await this.pool.connect();
+     try {
+-      await client.query(`SET TIME ZONE '${this.config.storeTimezone || 'UTC'}'`);
+       await client.query("set statement_timeout to 600000");
+       const res = await client.query({
+         text: query,
