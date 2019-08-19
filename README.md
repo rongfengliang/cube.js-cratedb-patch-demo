@@ -44,6 +44,12 @@ VALUES
 docker-compose up -d
 ```
 
+* Install deps
+
+```code
+yarn
+```
+
 * Apply patch
 
 ```code
@@ -58,4 +64,10 @@ The text leading up to this was:
 --------------------------
 File to patch: node_modules/@cubejs-backend/postgres-driver/driver/PostgresDriver.js
 patching file node_modules/@cubejs-backend/postgres-driver/driver/PostgresDriver.js
+```
+
+* Start dev server
+
+```code
+yarn dev
 ```
